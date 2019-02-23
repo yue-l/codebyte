@@ -27,3 +27,15 @@ function LetterChanges($str) {
 
     return $out;
 }
+
+/**
+ * compute first factorial
+ * @param  int         $num
+ * @return int         multiple of the numbers
+ */
+function FirstFactorial($num) {
+    if ($num == 1) {
+        return $num;
+    }
+    return $num * FirstFactorial($num - 1);
+}
