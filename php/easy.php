@@ -39,3 +39,15 @@ function FirstFactorial($num) {
     }
     return $num * FirstFactorial($num - 1);
 }
+
+/**
+ * Simple Adding
+ * @param  int       $num add to
+ * @return int       sum of the numbers
+ */
+function SimpleAdding($num) {
+    if($num == 1) {
+        return $num;
+    }
+    return $num + SimpleAdding($num - 1);
+}
