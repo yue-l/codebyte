@@ -1,18 +1,18 @@
 <?php
 /**
- * reverse string
- * @param string
- * @return string reversed string
- */
+* reverse string
+* @param string
+* @return string reversed string
+*/
 function FirstReverse($str) {
     return strrev($str);
 }
 
 /**
- * shift letter by 1 from ASCII table, and change vowels to uppercase.
- * @param  string        $str
- * @return string formatted string
- */
+* shift letter by 1 from ASCII table, and change vowels to uppercase.
+* @param  string        $str
+* @return string formatted string
+*/
 function LetterChanges($str) {
     $out = "";
     for ($i = 0; $i < strlen($str); $i++) {
@@ -29,10 +29,10 @@ function LetterChanges($str) {
 }
 
 /**
- * compute first factorial
- * @param  int         $num
- * @return int         multiple of the numbers
- */
+* compute first factorial
+* @param  int         $num
+* @return int         multiple of the numbers
+*/
 function FirstFactorial($num) {
     if ($num == 1) {
         return $num;
@@ -41,13 +41,29 @@ function FirstFactorial($num) {
 }
 
 /**
- * Simple Adding
- * @param  int       $num add to
- * @return int       sum of the numbers
- */
+* Simple Adding
+* @param  int       $num add to
+* @return int       sum of the numbers
+*/
 function SimpleAdding($num) {
     if($num == 1) {
         return $num;
     }
     return $num + SimpleAdding($num - 1);
+}
+
+/**
+* Test longest word
+*/
+function LongestWord($sen) {
+    // code goes here
+    $longest = "";
+    $arr = explode(' ', $sen);
+    foreach($arr as $tempWord) {
+        $temp = preg_replace("/[^A-Za-z]/", '', $tempWord);
+        if(strlen($temp) > strlen($longest)) {
+            $longest = $temp;
+        }
+    }
+    return $longest;
 }
